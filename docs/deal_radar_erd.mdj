@@ -1,0 +1,985 @@
+{
+  "_type": "Project",
+  "_id": "cbf388b84f5c4ade",
+  "name": "Deal Radar ERD",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "6e25d5a70e4743ec",
+      "_parent": {
+        "$ref": "cbf388b84f5c4ade"
+      },
+      "name": "Deal Radar Data Model",
+      "ownedElements": [
+        {
+          "_type": "UMLClass",
+          "_id": "5b16738e81c5480e",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "Category",
+          "visibility": "public",
+          "isAbstract": false,
+          "isFinalSpecialization": false,
+          "isLeaf": false,
+          "isActive": false,
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "e83bc78b53394b95",
+              "_parent": {
+                "$ref": "5b16738e81c5480e"
+              },
+              "name": "category_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {PK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "62953a5e66cc4418",
+              "_parent": {
+                "$ref": "5b16738e81c5480e"
+              },
+              "name": "name",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "string",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            }
+          ],
+          "operations": []
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "32484630a2aa4e63",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "Product",
+          "visibility": "public",
+          "isAbstract": false,
+          "isFinalSpecialization": false,
+          "isLeaf": false,
+          "isActive": false,
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "a62fa7c2c4974c78",
+              "_parent": {
+                "$ref": "32484630a2aa4e63"
+              },
+              "name": "product_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {PK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "167e7a90b9394d0c",
+              "_parent": {
+                "$ref": "32484630a2aa4e63"
+              },
+              "name": "name",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "string",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "714adeb577c540a5",
+              "_parent": {
+                "$ref": "32484630a2aa4e63"
+              },
+              "name": "brand",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "string",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "76681036b3a44648",
+              "_parent": {
+                "$ref": "32484630a2aa4e63"
+              },
+              "name": "category_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {FK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            }
+          ],
+          "operations": []
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "a1c18149afc24397",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "Retailer",
+          "visibility": "public",
+          "isAbstract": false,
+          "isFinalSpecialization": false,
+          "isLeaf": false,
+          "isActive": false,
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "2b861c1710e84360",
+              "_parent": {
+                "$ref": "a1c18149afc24397"
+              },
+              "name": "retailer_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {PK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "1f9279c57d814e04",
+              "_parent": {
+                "$ref": "a1c18149afc24397"
+              },
+              "name": "name",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "string",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "76753769672a47e7",
+              "_parent": {
+                "$ref": "a1c18149afc24397"
+              },
+              "name": "has_api",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "boolean",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            }
+          ],
+          "operations": []
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "330974da24c846ea",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "Listing",
+          "visibility": "public",
+          "isAbstract": false,
+          "isFinalSpecialization": false,
+          "isLeaf": false,
+          "isActive": false,
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "b3369bd755c74642",
+              "_parent": {
+                "$ref": "330974da24c846ea"
+              },
+              "name": "listing_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {PK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "2bdc1be1525d435c",
+              "_parent": {
+                "$ref": "330974da24c846ea"
+              },
+              "name": "product_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {FK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "07d2ebefada64346",
+              "_parent": {
+                "$ref": "330974da24c846ea"
+              },
+              "name": "retailer_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {FK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "0ada0e63cebb4352",
+              "_parent": {
+                "$ref": "330974da24c846ea"
+              },
+              "name": "retailer_sku",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "string",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "1dcba90276fe4b4d",
+              "_parent": {
+                "$ref": "330974da24c846ea"
+              },
+              "name": "product_url",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "string",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            }
+          ],
+          "operations": []
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "b54f25078229405d",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "PriceSnapshot",
+          "visibility": "public",
+          "isAbstract": false,
+          "isFinalSpecialization": false,
+          "isLeaf": false,
+          "isActive": false,
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "e1d35ded2b514815",
+              "_parent": {
+                "$ref": "b54f25078229405d"
+              },
+              "name": "snapshot_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {PK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "a3f59bb338c64740",
+              "_parent": {
+                "$ref": "b54f25078229405d"
+              },
+              "name": "listing_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {FK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "4173f41fd0e64934",
+              "_parent": {
+                "$ref": "b54f25078229405d"
+              },
+              "name": "listed_price",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "decimal",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "f56ebbbab2c049d6",
+              "_parent": {
+                "$ref": "b54f25078229405d"
+              },
+              "name": "true_price",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "decimal",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "e9f91f7baac540c6",
+              "_parent": {
+                "$ref": "b54f25078229405d"
+              },
+              "name": "recorded_at",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "datetime",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            }
+          ],
+          "operations": []
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "b8ec443df9c14bd3",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "Offer",
+          "visibility": "public",
+          "isAbstract": false,
+          "isFinalSpecialization": false,
+          "isLeaf": false,
+          "isActive": false,
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "f9a53038ab8941a4",
+              "_parent": {
+                "$ref": "b8ec443df9c14bd3"
+              },
+              "name": "offer_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {PK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "c83d881728d74580",
+              "_parent": {
+                "$ref": "b8ec443df9c14bd3"
+              },
+              "name": "listing_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {FK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "f147348c784c44e0",
+              "_parent": {
+                "$ref": "b8ec443df9c14bd3"
+              },
+              "name": "offer_type",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "string",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "d3387b83d3a44611",
+              "_parent": {
+                "$ref": "b8ec443df9c14bd3"
+              },
+              "name": "discount_value",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "decimal",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            }
+          ],
+          "operations": []
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "911867cc2bcd41d7",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "ReviewSignal",
+          "visibility": "public",
+          "isAbstract": false,
+          "isFinalSpecialization": false,
+          "isLeaf": false,
+          "isActive": false,
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "12447a5551414bef",
+              "_parent": {
+                "$ref": "911867cc2bcd41d7"
+              },
+              "name": "signal_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {PK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "ecd616843d2e4ec5",
+              "_parent": {
+                "$ref": "911867cc2bcd41d7"
+              },
+              "name": "listing_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {FK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "47b14a82cabc4c01",
+              "_parent": {
+                "$ref": "911867cc2bcd41d7"
+              },
+              "name": "keyword_tag",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "string",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "f8eded7957bb4047",
+              "_parent": {
+                "$ref": "911867cc2bcd41d7"
+              },
+              "name": "mention_count",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            }
+          ],
+          "operations": []
+        },
+        {
+          "_type": "UMLClass",
+          "_id": "20c79d51be154902",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "DealScore",
+          "visibility": "public",
+          "isAbstract": false,
+          "isFinalSpecialization": false,
+          "isLeaf": false,
+          "isActive": false,
+          "attributes": [
+            {
+              "_type": "UMLAttribute",
+              "_id": "5d190f87d4534efe",
+              "_parent": {
+                "$ref": "20c79d51be154902"
+              },
+              "name": "score_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {PK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "d0eba72c4e3944a7",
+              "_parent": {
+                "$ref": "20c79d51be154902"
+              },
+              "name": "listing_id",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "int {FK}",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "2f6db8b1675f4738",
+              "_parent": {
+                "$ref": "20c79d51be154902"
+              },
+              "name": "price_score",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "float",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "8f58a4cfc7d04b74",
+              "_parent": {
+                "$ref": "20c79d51be154902"
+              },
+              "name": "review_score",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "float",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "ba13d283029b44b2",
+              "_parent": {
+                "$ref": "20c79d51be154902"
+              },
+              "name": "composite_score",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "float",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            },
+            {
+              "_type": "UMLAttribute",
+              "_id": "f5a66d8bb0a94ad2",
+              "_parent": {
+                "$ref": "20c79d51be154902"
+              },
+              "name": "computed_at",
+              "visibility": "public",
+              "isStatic": false,
+              "isLeaf": false,
+              "type": "datetime",
+              "isReadOnly": false,
+              "isOrdered": false,
+              "isDerived": false,
+              "aggregation": "none"
+            }
+          ],
+          "operations": []
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "9e8a76541aaa466c",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "has",
+          "visibility": "public",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "4f7b4503d2eb44bc",
+            "_parent": {
+              "$ref": "9e8a76541aaa466c"
+            },
+            "reference": {
+              "$ref": "5b16738e81c5480e"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "5843c6363da64e6d",
+            "_parent": {
+              "$ref": "9e8a76541aaa466c"
+            },
+            "reference": {
+              "$ref": "32484630a2aa4e63"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "e69109b5ee244a1c",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "listed as",
+          "visibility": "public",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "bdde86ce82e244ac",
+            "_parent": {
+              "$ref": "e69109b5ee244a1c"
+            },
+            "reference": {
+              "$ref": "32484630a2aa4e63"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "596721546c714df9",
+            "_parent": {
+              "$ref": "e69109b5ee244a1c"
+            },
+            "reference": {
+              "$ref": "330974da24c846ea"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "75ef9df29ac74964",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "hosts",
+          "visibility": "public",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "babdd9d0e904498b",
+            "_parent": {
+              "$ref": "75ef9df29ac74964"
+            },
+            "reference": {
+              "$ref": "a1c18149afc24397"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "b3f32d71733c424d",
+            "_parent": {
+              "$ref": "75ef9df29ac74964"
+            },
+            "reference": {
+              "$ref": "330974da24c846ea"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "f2392055ef494de8",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "tracks",
+          "visibility": "public",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "eb9fe81ac436407b",
+            "_parent": {
+              "$ref": "f2392055ef494de8"
+            },
+            "reference": {
+              "$ref": "330974da24c846ea"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "978e8f58c6cb49ec",
+            "_parent": {
+              "$ref": "f2392055ef494de8"
+            },
+            "reference": {
+              "$ref": "b54f25078229405d"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "79c30f5e80994ddd",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "has",
+          "visibility": "public",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "2d18bcad0fd6473b",
+            "_parent": {
+              "$ref": "79c30f5e80994ddd"
+            },
+            "reference": {
+              "$ref": "330974da24c846ea"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "6d7ec056e0ce48a3",
+            "_parent": {
+              "$ref": "79c30f5e80994ddd"
+            },
+            "reference": {
+              "$ref": "b8ec443df9c14bd3"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "d6e19dfa894743b5",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "has",
+          "visibility": "public",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "a20e59204de84b27",
+            "_parent": {
+              "$ref": "d6e19dfa894743b5"
+            },
+            "reference": {
+              "$ref": "330974da24c846ea"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "27c29306caf34e13",
+            "_parent": {
+              "$ref": "d6e19dfa894743b5"
+            },
+            "reference": {
+              "$ref": "911867cc2bcd41d7"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "32261d9d07f649f1",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "scored",
+          "visibility": "public",
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "f509e3e74b2249c2",
+            "_parent": {
+              "$ref": "32261d9d07f649f1"
+            },
+            "reference": {
+              "$ref": "330974da24c846ea"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "1"
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "c2b745af217342e2",
+            "_parent": {
+              "$ref": "32261d9d07f649f1"
+            },
+            "reference": {
+              "$ref": "20c79d51be154902"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false,
+            "multiplicity": "0..*"
+          }
+        },
+        {
+          "_type": "UMLClassDiagram",
+          "_id": "f4630d551fdc4ce0",
+          "_parent": {
+            "$ref": "6e25d5a70e4743ec"
+          },
+          "name": "Deal Radar ERD",
+          "visible": true,
+          "defaultDiagram": true,
+          "ownedViews": []
+        }
+      ]
+    }
+  ]
+}

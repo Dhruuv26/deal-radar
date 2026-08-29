@@ -1,0 +1,875 @@
+{
+  "_type": "Project",
+  "_id": "f31fd62a559b4474",
+  "name": "Deal Radar Sequence Diagrams",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "b4b9779970c6469c",
+      "_parent": {
+        "$ref": "f31fd62a559b4474"
+      },
+      "name": "Deal Radar Sequence Diagrams",
+      "ownedElements": [
+        {
+          "_type": "UMLInteraction",
+          "_id": "d598822f903e454e",
+          "_parent": {
+            "$ref": "b4b9779970c6469c"
+          },
+          "name": "Main - Typical Deal Radar Session",
+          "visibility": "public"
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "e203c5c63fd74055",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "User",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "91efdec1185643f4",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "Deal Radar System",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "a0c7a5e11d5745fa",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "Scheduler",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "3bafed761b1445b7",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "Retailer API",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "4a8d05be3c804936",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "Notification Service",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "1f9d6d888bf94e94",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "searchProducts()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "e203c5c63fd74055"
+          },
+          "target": {
+            "$ref": "91efdec1185643f4"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "ff8bc7a6b2a34d01",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "return searchResults",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "91efdec1185643f4"
+          },
+          "target": {
+            "$ref": "e203c5c63fd74055"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "0fa6db9748ce4491",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "addProductToTrack()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "e203c5c63fd74055"
+          },
+          "target": {
+            "$ref": "91efdec1185643f4"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "2f2968c71e274cdc",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "return confirmation",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "91efdec1185643f4"
+          },
+          "target": {
+            "$ref": "e203c5c63fd74055"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "3547d3c47981454b",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "viewPriceHistory()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "e203c5c63fd74055"
+          },
+          "target": {
+            "$ref": "91efdec1185643f4"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "490e2c13cd7e4ebf",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "return priceHistoryChart",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "91efdec1185643f4"
+          },
+          "target": {
+            "$ref": "e203c5c63fd74055"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "8ec26cbfe1b14d7c",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "compareListings()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "e203c5c63fd74055"
+          },
+          "target": {
+            "$ref": "91efdec1185643f4"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "8b7cb39825a74c53",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "return comparisonView",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "91efdec1185643f4"
+          },
+          "target": {
+            "$ref": "e203c5c63fd74055"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "afbe2e02ebe24a4f",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "manageWatchlist()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "e203c5c63fd74055"
+          },
+          "target": {
+            "$ref": "91efdec1185643f4"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "ccdc902a317747be",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "return watchlistUpdated",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "91efdec1185643f4"
+          },
+          "target": {
+            "$ref": "e203c5c63fd74055"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "9fbdc5b48f504cd3",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "refreshPriceData()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "a0c7a5e11d5745fa"
+          },
+          "target": {
+            "$ref": "91efdec1185643f4"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "19a6af69e4eb45b8",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "fetchListingsAndPrices()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "91efdec1185643f4"
+          },
+          "target": {
+            "$ref": "3bafed761b1445b7"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "70431a1a38354e4d",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "return rawListingData",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "3bafed761b1445b7"
+          },
+          "target": {
+            "$ref": "91efdec1185643f4"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "5d0987a3bb5e4652",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "sendDealAlert()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "91efdec1185643f4"
+          },
+          "target": {
+            "$ref": "4a8d05be3c804936"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "8ddb0a61bd1a4ac4",
+          "_parent": {
+            "$ref": "d598822f903e454e"
+          },
+          "name": "dealAlertReceived",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "4a8d05be3c804936"
+          },
+          "target": {
+            "$ref": "e203c5c63fd74055"
+          }
+        },
+        {
+          "_type": "UMLSequenceDiagram",
+          "_id": "8311e3573abd4e75",
+          "_parent": {
+            "$ref": "b4b9779970c6469c"
+          },
+          "name": "Sequence - Main Session",
+          "visible": true,
+          "defaultDiagram": false,
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLInteraction",
+          "_id": "ff941ccc949642d1",
+          "_parent": {
+            "$ref": "b4b9779970c6469c"
+          },
+          "name": "Refresh Price Data - Detail",
+          "visibility": "public"
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "76c1fbc85b2d4487",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "Scheduler",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "0496fcc06972490a",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "RefreshPriceData",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "f38595cbd41448f1",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "Retailer API",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "51677684cd2b4201",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "OfferParser",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "43212aba8cf242bb",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "TruePriceEngine",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "94c78f4ff5f041aa",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "ReviewExtractor",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "e601e638e41547e1",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "DealScoreEngine",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "8c5e19898d0346f2",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "WatchlistChecker",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "e8c486bb1ed64289",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "trigger()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "76c1fbc85b2d4487"
+          },
+          "target": {
+            "$ref": "0496fcc06972490a"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "b0befe5546244e85",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "fetchListingsFromRetailerAPIs()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "0496fcc06972490a"
+          },
+          "target": {
+            "$ref": "f38595cbd41448f1"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "7621d0af49024b9b",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "return rawListingData",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "f38595cbd41448f1"
+          },
+          "target": {
+            "$ref": "0496fcc06972490a"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "d05aa4e875c64f8b",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "parseOffersAndCoupons()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "0496fcc06972490a"
+          },
+          "target": {
+            "$ref": "51677684cd2b4201"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "06b2347a6aec40f1",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "return parsedOffers",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "51677684cd2b4201"
+          },
+          "target": {
+            "$ref": "0496fcc06972490a"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "6a5737e1b7a14960",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "computeTruePrice()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "0496fcc06972490a"
+          },
+          "target": {
+            "$ref": "43212aba8cf242bb"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "0beac497a4cc4935",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "return truePrice",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "43212aba8cf242bb"
+          },
+          "target": {
+            "$ref": "0496fcc06972490a"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "c02f890962124d61",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "extractReviewSignals()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "0496fcc06972490a"
+          },
+          "target": {
+            "$ref": "94c78f4ff5f041aa"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "dafafd3ba06c4a0c",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "return reviewSignals",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "94c78f4ff5f041aa"
+          },
+          "target": {
+            "$ref": "0496fcc06972490a"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "16f2776c542b43b8",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "computeDealScore()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "0496fcc06972490a"
+          },
+          "target": {
+            "$ref": "e601e638e41547e1"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "4fec95a800ba422f",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "return dealScore",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "e601e638e41547e1"
+          },
+          "target": {
+            "$ref": "0496fcc06972490a"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "e3d8e273aea54326",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "checkWatchlistThresholds()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "0496fcc06972490a"
+          },
+          "target": {
+            "$ref": "8c5e19898d0346f2"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "881f64e760594aa1",
+          "_parent": {
+            "$ref": "ff941ccc949642d1"
+          },
+          "name": "return thresholdResult",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "8c5e19898d0346f2"
+          },
+          "target": {
+            "$ref": "0496fcc06972490a"
+          }
+        },
+        {
+          "_type": "UMLSequenceDiagram",
+          "_id": "7d7490c585e044f5",
+          "_parent": {
+            "$ref": "b4b9779970c6469c"
+          },
+          "name": "Sequence - Refresh Price Data (Detail)",
+          "visible": true,
+          "defaultDiagram": false,
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLInteraction",
+          "_id": "a7e0a4ca47a34eb9",
+          "_parent": {
+            "$ref": "b4b9779970c6469c"
+          },
+          "name": "Compare Listings - Detail",
+          "visibility": "public"
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "a514d3ce7ffe4af2",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "User",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "62ea7837c37c4ecf",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "CompareListings",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "3029ac24e49d4f7d",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "SelectProducts",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "ada90e28d4d24257",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "PriceHistoryChart",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "5ce7217370fd46c4",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "DealScoreBadge",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "98735093611145d3",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "BestDealHighlighter",
+          "visibility": "public",
+          "isMultiInstance": false
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "5ad6d8c08cdb4fb8",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "compareListings()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "a514d3ce7ffe4af2"
+          },
+          "target": {
+            "$ref": "62ea7837c37c4ecf"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "bc3391f481fe4975",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "selectProductsToCompare()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "62ea7837c37c4ecf"
+          },
+          "target": {
+            "$ref": "3029ac24e49d4f7d"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "db4ef0e53a4d47b2",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "return selectedProducts",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "3029ac24e49d4f7d"
+          },
+          "target": {
+            "$ref": "62ea7837c37c4ecf"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "d141f8c253764a20",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "displayPriceHistoryChart()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "62ea7837c37c4ecf"
+          },
+          "target": {
+            "$ref": "ada90e28d4d24257"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "56bea1b2945b4d26",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "return chartView",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "ada90e28d4d24257"
+          },
+          "target": {
+            "$ref": "62ea7837c37c4ecf"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "9c27c8da300a446f",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "displayDealScoreBadge()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "62ea7837c37c4ecf"
+          },
+          "target": {
+            "$ref": "5ce7217370fd46c4"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "feb2e4d4a13c4003",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "return badgeView",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "5ce7217370fd46c4"
+          },
+          "target": {
+            "$ref": "62ea7837c37c4ecf"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "56da51c60c8d40e7",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "highlightBestDeal()",
+          "visibility": "public",
+          "messageSort": "synchCall",
+          "source": {
+            "$ref": "62ea7837c37c4ecf"
+          },
+          "target": {
+            "$ref": "98735093611145d3"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "8b97b87c0cf94a23",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "return highlightedView",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "98735093611145d3"
+          },
+          "target": {
+            "$ref": "62ea7837c37c4ecf"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "37ce98ad08914578",
+          "_parent": {
+            "$ref": "a7e0a4ca47a34eb9"
+          },
+          "name": "return comparisonView",
+          "visibility": "public",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "62ea7837c37c4ecf"
+          },
+          "target": {
+            "$ref": "a514d3ce7ffe4af2"
+          }
+        },
+        {
+          "_type": "UMLSequenceDiagram",
+          "_id": "20ae554ea7c74b39",
+          "_parent": {
+            "$ref": "b4b9779970c6469c"
+          },
+          "name": "Sequence - Compare Listings (Detail)",
+          "visible": true,
+          "defaultDiagram": false,
+          "ownedViews": []
+        }
+      ]
+    }
+  ]
+}
