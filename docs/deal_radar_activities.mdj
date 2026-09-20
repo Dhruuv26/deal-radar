@@ -1,0 +1,783 @@
+{
+  "_type": "Project",
+  "_id": "29975d03717a4ad1",
+  "name": "Deal Radar Activity Diagrams",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "043f2b6263724d78",
+      "_parent": {
+        "$ref": "29975d03717a4ad1"
+      },
+      "name": "Deal Radar Activity Diagrams",
+      "ownedElements": [
+        {
+          "_type": "UMLActivity",
+          "_id": "84303a20e3ad4250",
+          "_parent": {
+            "$ref": "043f2b6263724d78"
+          },
+          "name": "Main - Typical Deal Radar Session",
+          "visibility": "public"
+        },
+        {
+          "_type": "UMLInitialNode",
+          "_id": "7c07ec10a51748f7",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          }
+        },
+        {
+          "_type": "UMLForkNode",
+          "_id": "514a07a664ba49c5",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "c471de1312fe405b",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "7c07ec10a51748f7"
+          },
+          "target": {
+            "$ref": "514a07a664ba49c5"
+          }
+        },
+        {
+          "_type": "UMLDecisionNode",
+          "_id": "d19cd119f0ae4aef",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "name": "Choose action"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "38d34623cd594777",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "name": "Search Products"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "1c29816b0dad4e68",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "name": "Add Product to Track"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "bd28f3e8e3ad478a",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "name": "View Price History"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "d848a0b111aa4a98",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "name": "Compare Listings"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "5d20dc8f8a4f4cc0",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "name": "Manage Watchlist"
+        },
+        {
+          "_type": "UMLMergeNode",
+          "_id": "df15a0ef3d844787",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "7e668055f3024124",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "514a07a664ba49c5"
+          },
+          "target": {
+            "$ref": "d19cd119f0ae4aef"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "583d18a8cd554185",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "d19cd119f0ae4aef"
+          },
+          "target": {
+            "$ref": "38d34623cd594777"
+          },
+          "guard": "[search]"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "a2c89375634242dc",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "d19cd119f0ae4aef"
+          },
+          "target": {
+            "$ref": "1c29816b0dad4e68"
+          },
+          "guard": "[add product]"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "4ea7dc37dba04d69",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "d19cd119f0ae4aef"
+          },
+          "target": {
+            "$ref": "bd28f3e8e3ad478a"
+          },
+          "guard": "[view history]"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "5c6bac07a51c4a28",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "d19cd119f0ae4aef"
+          },
+          "target": {
+            "$ref": "d848a0b111aa4a98"
+          },
+          "guard": "[compare]"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "5f3a99dcd3ea49a3",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "d19cd119f0ae4aef"
+          },
+          "target": {
+            "$ref": "5d20dc8f8a4f4cc0"
+          },
+          "guard": "[manage watchlist]"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f582a1ad84e949ea",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "38d34623cd594777"
+          },
+          "target": {
+            "$ref": "df15a0ef3d844787"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "c4642e0c214d446a",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "1c29816b0dad4e68"
+          },
+          "target": {
+            "$ref": "df15a0ef3d844787"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "9eb77aa849f248dc",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "bd28f3e8e3ad478a"
+          },
+          "target": {
+            "$ref": "df15a0ef3d844787"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "1e536529428c4bc9",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "d848a0b111aa4a98"
+          },
+          "target": {
+            "$ref": "df15a0ef3d844787"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "d664861b246d404a",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "5d20dc8f8a4f4cc0"
+          },
+          "target": {
+            "$ref": "df15a0ef3d844787"
+          }
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "5d5064b55b2f4db2",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "name": "Trigger Refresh"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "a3e029b1a6cd4409",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "name": "Fetch Listings & Prices"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "7e8603c779fe46ef",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "name": "Send Deal Alert"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "6098c31a68644ed2",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "name": "Deliver Notification"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "35e74077d6234e12",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "name": "Receive Deal Alert"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "cd245412a71d44d3",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "514a07a664ba49c5"
+          },
+          "target": {
+            "$ref": "5d5064b55b2f4db2"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "737b7b91a3604c18",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "5d5064b55b2f4db2"
+          },
+          "target": {
+            "$ref": "a3e029b1a6cd4409"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "ea25f875d2604825",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "a3e029b1a6cd4409"
+          },
+          "target": {
+            "$ref": "7e8603c779fe46ef"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "ad9b4f5c38744070",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "7e8603c779fe46ef"
+          },
+          "target": {
+            "$ref": "6098c31a68644ed2"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "12b10c76a03c40f9",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "6098c31a68644ed2"
+          },
+          "target": {
+            "$ref": "35e74077d6234e12"
+          }
+        },
+        {
+          "_type": "UMLActivityFinalNode",
+          "_id": "33e33f455eb24f3a",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "140a0df54f9f42e6",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "df15a0ef3d844787"
+          },
+          "target": {
+            "$ref": "33e33f455eb24f3a"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "ea9e16ed7b4c4192",
+          "_parent": {
+            "$ref": "84303a20e3ad4250"
+          },
+          "source": {
+            "$ref": "35e74077d6234e12"
+          },
+          "target": {
+            "$ref": "33e33f455eb24f3a"
+          }
+        },
+        {
+          "_type": "UMLActivityDiagram",
+          "_id": "5bfe32cd9de84935",
+          "_parent": {
+            "$ref": "043f2b6263724d78"
+          },
+          "name": "Activity - Main Session",
+          "visible": true,
+          "defaultDiagram": false,
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLActivity",
+          "_id": "536adb8ba585420c",
+          "_parent": {
+            "$ref": "043f2b6263724d78"
+          },
+          "name": "Refresh Price Data - Detail",
+          "visibility": "public"
+        },
+        {
+          "_type": "UMLInitialNode",
+          "_id": "e7fa2f2bed10496d",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          }
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "41dbf5a8509b4f7d",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "name": "Trigger"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "c3e22950d67a4474",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "name": "Fetch Listings from Retailer APIs"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "d33c0f164da043bd",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "name": "Parse Offers & Coupons"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "197037c447f14733",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "name": "Compute True Price"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "70686ee85811426f",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "name": "Extract Review Signals"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "c2a34d66b88147b9",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "name": "Compute Deal Score"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "2329960e9d474416",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "name": "Check Watchlist Thresholds"
+        },
+        {
+          "_type": "UMLActivityFinalNode",
+          "_id": "b1a39816102d4f23",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "1f3bd1f14a324194",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "source": {
+            "$ref": "e7fa2f2bed10496d"
+          },
+          "target": {
+            "$ref": "41dbf5a8509b4f7d"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "9c6ccdaadffd4b4f",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "source": {
+            "$ref": "41dbf5a8509b4f7d"
+          },
+          "target": {
+            "$ref": "c3e22950d67a4474"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "3132a3969fc0419b",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "source": {
+            "$ref": "c3e22950d67a4474"
+          },
+          "target": {
+            "$ref": "d33c0f164da043bd"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "996b339dca324a17",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "source": {
+            "$ref": "d33c0f164da043bd"
+          },
+          "target": {
+            "$ref": "197037c447f14733"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "5f9e05b709c5472d",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "source": {
+            "$ref": "197037c447f14733"
+          },
+          "target": {
+            "$ref": "70686ee85811426f"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "fc478d3609774b44",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "source": {
+            "$ref": "70686ee85811426f"
+          },
+          "target": {
+            "$ref": "c2a34d66b88147b9"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "58bab1d9e08a4cd5",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "source": {
+            "$ref": "c2a34d66b88147b9"
+          },
+          "target": {
+            "$ref": "2329960e9d474416"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "234e18e4b4c84cb9",
+          "_parent": {
+            "$ref": "536adb8ba585420c"
+          },
+          "source": {
+            "$ref": "2329960e9d474416"
+          },
+          "target": {
+            "$ref": "b1a39816102d4f23"
+          }
+        },
+        {
+          "_type": "UMLActivityDiagram",
+          "_id": "bfab8bc528d24b6c",
+          "_parent": {
+            "$ref": "043f2b6263724d78"
+          },
+          "name": "Activity - Refresh Price Data (Detail)",
+          "visible": true,
+          "defaultDiagram": false,
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLActivity",
+          "_id": "545fff1142764313",
+          "_parent": {
+            "$ref": "043f2b6263724d78"
+          },
+          "name": "Compare Listings - Detail",
+          "visibility": "public"
+        },
+        {
+          "_type": "UMLInitialNode",
+          "_id": "0d3340e20d95499a",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          }
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "4d35cf9a250b413d",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          },
+          "name": "Select Products to Compare"
+        },
+        {
+          "_type": "UMLForkNode",
+          "_id": "37ab1a320839470e",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          }
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "46b8a225c8884536",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          },
+          "name": "Display Price History Chart"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "d3ae0d02b3e74e87",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          },
+          "name": "Display Deal Score Badge"
+        },
+        {
+          "_type": "UMLJoinNode",
+          "_id": "9b674258a41c4ac5",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          }
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "745ae89509114363",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          },
+          "name": "Highlight Best Deal"
+        },
+        {
+          "_type": "UMLActivityFinalNode",
+          "_id": "7fbf742f8fa3444c",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "37039cdfc7814373",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          },
+          "source": {
+            "$ref": "0d3340e20d95499a"
+          },
+          "target": {
+            "$ref": "4d35cf9a250b413d"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "83c0e47ec3664b62",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          },
+          "source": {
+            "$ref": "4d35cf9a250b413d"
+          },
+          "target": {
+            "$ref": "37ab1a320839470e"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "3ca072a84b9f4de6",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          },
+          "source": {
+            "$ref": "37ab1a320839470e"
+          },
+          "target": {
+            "$ref": "46b8a225c8884536"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "950579ef7bbd4347",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          },
+          "source": {
+            "$ref": "37ab1a320839470e"
+          },
+          "target": {
+            "$ref": "d3ae0d02b3e74e87"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "2543096de7cc4678",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          },
+          "source": {
+            "$ref": "46b8a225c8884536"
+          },
+          "target": {
+            "$ref": "9b674258a41c4ac5"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "535f38ce0fbd4b4c",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          },
+          "source": {
+            "$ref": "d3ae0d02b3e74e87"
+          },
+          "target": {
+            "$ref": "9b674258a41c4ac5"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "273c4b4eff2f47d1",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          },
+          "source": {
+            "$ref": "9b674258a41c4ac5"
+          },
+          "target": {
+            "$ref": "745ae89509114363"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "ecd601e7b2374159",
+          "_parent": {
+            "$ref": "545fff1142764313"
+          },
+          "source": {
+            "$ref": "745ae89509114363"
+          },
+          "target": {
+            "$ref": "7fbf742f8fa3444c"
+          }
+        },
+        {
+          "_type": "UMLActivityDiagram",
+          "_id": "93dd94b1d6c74bbd",
+          "_parent": {
+            "$ref": "043f2b6263724d78"
+          },
+          "name": "Activity - Compare Listings (Detail)",
+          "visible": true,
+          "defaultDiagram": false,
+          "ownedViews": []
+        }
+      ]
+    }
+  ]
+}

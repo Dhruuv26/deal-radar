@@ -1,0 +1,898 @@
+{
+  "_type": "Project",
+  "_id": "bfa7e913fce74745",
+  "name": "Deal Radar Use Case Diagrams",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "911bdc73eb4a4040",
+      "_parent": {
+        "$ref": "bfa7e913fce74745"
+      },
+      "name": "Deal Radar Use Cases",
+      "ownedElements": [
+        {
+          "_type": "UMLActor",
+          "_id": "fce2f9135060450b",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "User",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "46c9a50ed26d400f",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Search Products",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "7f89eef841504ce8",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "5a8105b8af9b4c49",
+            "_parent": {
+              "$ref": "7f89eef841504ce8"
+            },
+            "reference": {
+              "$ref": "fce2f9135060450b"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "e44faae1b29d4a1a",
+            "_parent": {
+              "$ref": "7f89eef841504ce8"
+            },
+            "reference": {
+              "$ref": "46c9a50ed26d400f"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "099d6f7233704341",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Add Product to Track",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "1eb3e2a9cc554a2b",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "000d55781b624dbc",
+            "_parent": {
+              "$ref": "1eb3e2a9cc554a2b"
+            },
+            "reference": {
+              "$ref": "fce2f9135060450b"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "82992cd19a4449e4",
+            "_parent": {
+              "$ref": "1eb3e2a9cc554a2b"
+            },
+            "reference": {
+              "$ref": "099d6f7233704341"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "580f9d3c6f974bd2",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "View Price History",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "441d5e3cccc84e71",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "28b2fb7673c64eec",
+            "_parent": {
+              "$ref": "441d5e3cccc84e71"
+            },
+            "reference": {
+              "$ref": "fce2f9135060450b"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "3ad018983ae14a84",
+            "_parent": {
+              "$ref": "441d5e3cccc84e71"
+            },
+            "reference": {
+              "$ref": "580f9d3c6f974bd2"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "0e2cee690fc748d7",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Compare Listings",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "ac0e90fe256b4d9f",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "78150aa6431740a3",
+            "_parent": {
+              "$ref": "ac0e90fe256b4d9f"
+            },
+            "reference": {
+              "$ref": "fce2f9135060450b"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "85c569e823804d0a",
+            "_parent": {
+              "$ref": "ac0e90fe256b4d9f"
+            },
+            "reference": {
+              "$ref": "0e2cee690fc748d7"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "aa399302b00d4ace",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "View Deal Score",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "1ef59866f5c04f94",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "59a4f003e59d4a30",
+            "_parent": {
+              "$ref": "1ef59866f5c04f94"
+            },
+            "reference": {
+              "$ref": "fce2f9135060450b"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "dd7cd4e0923f49fe",
+            "_parent": {
+              "$ref": "1ef59866f5c04f94"
+            },
+            "reference": {
+              "$ref": "aa399302b00d4ace"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "ef69760c8c7c4034",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Manage Watchlist",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "25fe86dc737048dc",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "f9874c633e04424f",
+            "_parent": {
+              "$ref": "25fe86dc737048dc"
+            },
+            "reference": {
+              "$ref": "fce2f9135060450b"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "2d9bdf668cf9436f",
+            "_parent": {
+              "$ref": "25fe86dc737048dc"
+            },
+            "reference": {
+              "$ref": "ef69760c8c7c4034"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "8eefa509fadc4b3b",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Receive Deal Alert",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "f23f1a96721045c6",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "e14f2f8b1b634239",
+            "_parent": {
+              "$ref": "f23f1a96721045c6"
+            },
+            "reference": {
+              "$ref": "fce2f9135060450b"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "3dc5ca9a50ba4163",
+            "_parent": {
+              "$ref": "f23f1a96721045c6"
+            },
+            "reference": {
+              "$ref": "8eefa509fadc4b3b"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          }
+        },
+        {
+          "_type": "UMLActor",
+          "_id": "7856262c2f9b4dfc",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Scheduler",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "05c2ec32efb34f96",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Refresh Price Data",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "8875873e7aa24275",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "2b2798b34eeb41e9",
+            "_parent": {
+              "$ref": "8875873e7aa24275"
+            },
+            "reference": {
+              "$ref": "7856262c2f9b4dfc"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "792c8755d5c24122",
+            "_parent": {
+              "$ref": "8875873e7aa24275"
+            },
+            "reference": {
+              "$ref": "05c2ec32efb34f96"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          }
+        },
+        {
+          "_type": "UMLActor",
+          "_id": "0b9bde652c7841ca",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Retailer API",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "157621583c704e33",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "9a317ae8c7ff42ab",
+            "_parent": {
+              "$ref": "157621583c704e33"
+            },
+            "reference": {
+              "$ref": "0b9bde652c7841ca"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "25534ae40c84469b",
+            "_parent": {
+              "$ref": "157621583c704e33"
+            },
+            "reference": {
+              "$ref": "05c2ec32efb34f96"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          }
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "ef17369e69884f58",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "0e2cee690fc748d7"
+          },
+          "target": {
+            "$ref": "580f9d3c6f974bd2"
+          }
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "c32a392de2774ef5",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "0e2cee690fc748d7"
+          },
+          "target": {
+            "$ref": "aa399302b00d4ace"
+          }
+        },
+        {
+          "_type": "UMLUseCaseDiagram",
+          "_id": "5362f386e669498f",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Main Use Cases",
+          "visible": true,
+          "defaultDiagram": false,
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "0eb929e1dacc4859",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Fetch Listings from Retailer APIs",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "cc8788f4d99f48eb",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "05c2ec32efb34f96"
+          },
+          "target": {
+            "$ref": "0eb929e1dacc4859"
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "992cdbe3228e42a7",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Parse Offers & Coupons",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "67aaf32ee2c54cba",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "05c2ec32efb34f96"
+          },
+          "target": {
+            "$ref": "992cdbe3228e42a7"
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "364f901d6b5f41dd",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Compute True Price",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "fd9a74f2fa7c49cd",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "05c2ec32efb34f96"
+          },
+          "target": {
+            "$ref": "364f901d6b5f41dd"
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "d8573494cbba4925",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Extract Review Signals",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "2bf64a86f1384900",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "05c2ec32efb34f96"
+          },
+          "target": {
+            "$ref": "d8573494cbba4925"
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "2d8587581e4542f6",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Compute Deal Score",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "0cadfa007eb144c7",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "05c2ec32efb34f96"
+          },
+          "target": {
+            "$ref": "2d8587581e4542f6"
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "62e78fca8a7d4e62",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Check Watchlist Thresholds",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "aacc451dece74ee3",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "05c2ec32efb34f96"
+          },
+          "target": {
+            "$ref": "62e78fca8a7d4e62"
+          }
+        },
+        {
+          "_type": "UMLExtend",
+          "_id": "b56016f2232c495c",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "8eefa509fadc4b3b"
+          },
+          "target": {
+            "$ref": "62e78fca8a7d4e62"
+          },
+          "extensionLocations": []
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "9fd3f088923040f4",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "3cb7c82022ce4f03",
+            "_parent": {
+              "$ref": "9fd3f088923040f4"
+            },
+            "reference": {
+              "$ref": "0b9bde652c7841ca"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "9dc09d76c4db4c58",
+            "_parent": {
+              "$ref": "9fd3f088923040f4"
+            },
+            "reference": {
+              "$ref": "0eb929e1dacc4859"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "81316ce61285470f",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "0933ca96575a4be3",
+            "_parent": {
+              "$ref": "81316ce61285470f"
+            },
+            "reference": {
+              "$ref": "7856262c2f9b4dfc"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "45e55a871e8f4aa6",
+            "_parent": {
+              "$ref": "81316ce61285470f"
+            },
+            "reference": {
+              "$ref": "05c2ec32efb34f96"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          }
+        },
+        {
+          "_type": "UMLUseCaseDiagram",
+          "_id": "d3acb6db45174a68",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Refresh Price Data (Detail)",
+          "visible": true,
+          "defaultDiagram": false,
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "80881f205a104dd6",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Select Products to Compare",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "a0f3b8a13b2a4d86",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "0e2cee690fc748d7"
+          },
+          "target": {
+            "$ref": "80881f205a104dd6"
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "7386a1f24bc34486",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Display Price History Chart",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "c7285dc3ff804a73",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "0e2cee690fc748d7"
+          },
+          "target": {
+            "$ref": "7386a1f24bc34486"
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "7bcbf8da87d7483a",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Display Deal Score Badge",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "df32420569ad44d5",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "0e2cee690fc748d7"
+          },
+          "target": {
+            "$ref": "7bcbf8da87d7483a"
+          }
+        },
+        {
+          "_type": "UMLUseCase",
+          "_id": "256963f58b5b4901",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Highlight Best Deal",
+          "visibility": "public",
+          "isAbstract": false
+        },
+        {
+          "_type": "UMLInclude",
+          "_id": "efd3c9654d9249a4",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "source": {
+            "$ref": "0e2cee690fc748d7"
+          },
+          "target": {
+            "$ref": "256963f58b5b4901"
+          }
+        },
+        {
+          "_type": "UMLAssociation",
+          "_id": "34f54253e22340fe",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "end1": {
+            "_type": "UMLAssociationEnd",
+            "_id": "e83f0590c3c14858",
+            "_parent": {
+              "$ref": "34f54253e22340fe"
+            },
+            "reference": {
+              "$ref": "fce2f9135060450b"
+            },
+            "visibility": "public",
+            "navigable": false,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          },
+          "end2": {
+            "_type": "UMLAssociationEnd",
+            "_id": "4517f8b6246b440a",
+            "_parent": {
+              "$ref": "34f54253e22340fe"
+            },
+            "reference": {
+              "$ref": "80881f205a104dd6"
+            },
+            "visibility": "public",
+            "navigable": true,
+            "aggregation": "none",
+            "isOrdered": false,
+            "isDerived": false,
+            "isID": false
+          }
+        },
+        {
+          "_type": "UMLUseCaseDiagram",
+          "_id": "7b2c1f6a9ed84755",
+          "_parent": {
+            "$ref": "911bdc73eb4a4040"
+          },
+          "name": "Compare Listings (Detail)",
+          "visible": true,
+          "defaultDiagram": false,
+          "ownedViews": []
+        }
+      ]
+    }
+  ]
+}

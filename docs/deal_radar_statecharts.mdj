@@ -1,0 +1,560 @@
+{
+  "_type": "Project",
+  "_id": "0e0b7944395540f3",
+  "name": "Deal Radar State Machine Diagrams",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "36b59a4dda254f84",
+      "_parent": {
+        "$ref": "0e0b7944395540f3"
+      },
+      "name": "Deal Radar State Machine Diagrams",
+      "ownedElements": [
+        {
+          "_type": "UMLStateMachine",
+          "_id": "d30038e72bfe46a7",
+          "_parent": {
+            "$ref": "36b59a4dda254f84"
+          },
+          "name": "Listing Lifecycle",
+          "visibility": "public"
+        },
+        {
+          "_type": "UMLRegion",
+          "_id": "6fd791139c324a33",
+          "_parent": {
+            "$ref": "d30038e72bfe46a7"
+          },
+          "name": "region1"
+        },
+        {
+          "_type": "UMLPseudostate",
+          "_id": "5e7c416612e04bd4",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "kind": "initial"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "b7d58594f01b4b2c",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "name": "Tracked"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "eadc301608b342f8",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "name": "Refreshing"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "302f19fc0d384d72",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "name": "UpToDate"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "2015d935d3bc4ee6",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "name": "BeingCompared"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "8a8a28f129334019",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "name": "AlertTriggered"
+        },
+        {
+          "_type": "UMLFinalState",
+          "_id": "9b51b4cceb1f4110",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          }
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "25d53c7b81dd493b",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "source": {
+            "$ref": "5e7c416612e04bd4"
+          },
+          "target": {
+            "$ref": "b7d58594f01b4b2c"
+          },
+          "name": "Add Product to Track"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "93a4f71ab0be4e75",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "source": {
+            "$ref": "b7d58594f01b4b2c"
+          },
+          "target": {
+            "$ref": "eadc301608b342f8"
+          },
+          "name": "Scheduled Refresh"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "6a458badfc0a4a39",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "source": {
+            "$ref": "eadc301608b342f8"
+          },
+          "target": {
+            "$ref": "302f19fc0d384d72"
+          },
+          "name": "Data Fetched"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "dfb9fba2296f4c7c",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "source": {
+            "$ref": "302f19fc0d384d72"
+          },
+          "target": {
+            "$ref": "eadc301608b342f8"
+          },
+          "name": "Scheduled Refresh"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "914b6bc9b21b4672",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "source": {
+            "$ref": "302f19fc0d384d72"
+          },
+          "target": {
+            "$ref": "2015d935d3bc4ee6"
+          },
+          "name": "Compare Listings"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "973a51e22d484eda",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "source": {
+            "$ref": "2015d935d3bc4ee6"
+          },
+          "target": {
+            "$ref": "302f19fc0d384d72"
+          },
+          "name": "Comparison Closed"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "cc63db9f4a374923",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "source": {
+            "$ref": "302f19fc0d384d72"
+          },
+          "target": {
+            "$ref": "8a8a28f129334019"
+          },
+          "name": "Deal Score Crosses Threshold"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "607ac56acdb04c87",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "source": {
+            "$ref": "8a8a28f129334019"
+          },
+          "target": {
+            "$ref": "302f19fc0d384d72"
+          },
+          "name": "Alert Sent"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "c27ce105a0924761",
+          "_parent": {
+            "$ref": "6fd791139c324a33"
+          },
+          "source": {
+            "$ref": "302f19fc0d384d72"
+          },
+          "target": {
+            "$ref": "9b51b4cceb1f4110"
+          },
+          "name": "Remove from Watchlist"
+        },
+        {
+          "_type": "UMLStatechartDiagram",
+          "_id": "1c0ec8bca80344da",
+          "_parent": {
+            "$ref": "36b59a4dda254f84"
+          },
+          "name": "State - Listing Lifecycle (Main)",
+          "visible": true,
+          "defaultDiagram": false,
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLStateMachine",
+          "_id": "199218fc5f614b13",
+          "_parent": {
+            "$ref": "36b59a4dda254f84"
+          },
+          "name": "Refresh Price Data Processing",
+          "visibility": "public"
+        },
+        {
+          "_type": "UMLRegion",
+          "_id": "9271f8d6c3554947",
+          "_parent": {
+            "$ref": "199218fc5f614b13"
+          },
+          "name": "region1"
+        },
+        {
+          "_type": "UMLPseudostate",
+          "_id": "9287d31c89994684",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "kind": "initial"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "2218ad0bad784b84",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "name": "Fetching"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "f304004375d8449c",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "name": "ParsingOffers"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "e47f1cf258ab471e",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "name": "ComputingTruePrice"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "c8b078c8e0fd45f4",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "name": "ExtractingReviewSignals"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "49288eebd4f1493f",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "name": "ComputingDealScore"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "44625bbc9ea14d38",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "name": "CheckingWatchlist"
+        },
+        {
+          "_type": "UMLFinalState",
+          "_id": "ee12a00f12c0401b",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          }
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "47557f10685e44e8",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "source": {
+            "$ref": "9287d31c89994684"
+          },
+          "target": {
+            "$ref": "2218ad0bad784b84"
+          },
+          "name": "Trigger"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "f88b20259b0f4f39",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "source": {
+            "$ref": "2218ad0bad784b84"
+          },
+          "target": {
+            "$ref": "f304004375d8449c"
+          },
+          "name": "Listings Fetched"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "d711251397d94b2a",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "source": {
+            "$ref": "f304004375d8449c"
+          },
+          "target": {
+            "$ref": "e47f1cf258ab471e"
+          },
+          "name": "Offers Parsed"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "4f8d4f1d9c65490e",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "source": {
+            "$ref": "e47f1cf258ab471e"
+          },
+          "target": {
+            "$ref": "c8b078c8e0fd45f4"
+          },
+          "name": "True Price Computed"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "6244a772433844fd",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "source": {
+            "$ref": "c8b078c8e0fd45f4"
+          },
+          "target": {
+            "$ref": "49288eebd4f1493f"
+          },
+          "name": "Review Signals Extracted"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "53b7a047d4b547fe",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "source": {
+            "$ref": "49288eebd4f1493f"
+          },
+          "target": {
+            "$ref": "44625bbc9ea14d38"
+          },
+          "name": "Deal Score Computed"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "66c099a35f484f06",
+          "_parent": {
+            "$ref": "9271f8d6c3554947"
+          },
+          "source": {
+            "$ref": "44625bbc9ea14d38"
+          },
+          "target": {
+            "$ref": "ee12a00f12c0401b"
+          },
+          "name": "Thresholds Checked"
+        },
+        {
+          "_type": "UMLStatechartDiagram",
+          "_id": "ffb3e66388074e6a",
+          "_parent": {
+            "$ref": "36b59a4dda254f84"
+          },
+          "name": "State - Refresh Price Data (Detail)",
+          "visible": true,
+          "defaultDiagram": false,
+          "ownedViews": []
+        },
+        {
+          "_type": "UMLStateMachine",
+          "_id": "2d21b2d19ef14dbf",
+          "_parent": {
+            "$ref": "36b59a4dda254f84"
+          },
+          "name": "Compare Listings Session",
+          "visibility": "public"
+        },
+        {
+          "_type": "UMLRegion",
+          "_id": "7ebaa7b16633444d",
+          "_parent": {
+            "$ref": "2d21b2d19ef14dbf"
+          },
+          "name": "region1"
+        },
+        {
+          "_type": "UMLPseudostate",
+          "_id": "23cfeab2971945c9",
+          "_parent": {
+            "$ref": "7ebaa7b16633444d"
+          },
+          "kind": "initial"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "3bd6b2cbf7a5473e",
+          "_parent": {
+            "$ref": "7ebaa7b16633444d"
+          },
+          "name": "SelectingProducts"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "d0fecc3c60d0434c",
+          "_parent": {
+            "$ref": "7ebaa7b16633444d"
+          },
+          "name": "DisplayingPriceHistory"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "1cb24e8d1de94e41",
+          "_parent": {
+            "$ref": "7ebaa7b16633444d"
+          },
+          "name": "DisplayingDealScoreBadge"
+        },
+        {
+          "_type": "UMLState",
+          "_id": "062e888264b0478d",
+          "_parent": {
+            "$ref": "7ebaa7b16633444d"
+          },
+          "name": "HighlightingBestDeal"
+        },
+        {
+          "_type": "UMLFinalState",
+          "_id": "d9edc73711f74f09",
+          "_parent": {
+            "$ref": "7ebaa7b16633444d"
+          }
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "c78832f34e224daf",
+          "_parent": {
+            "$ref": "7ebaa7b16633444d"
+          },
+          "source": {
+            "$ref": "23cfeab2971945c9"
+          },
+          "target": {
+            "$ref": "3bd6b2cbf7a5473e"
+          },
+          "name": "Compare Listings triggered"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "8d7b856e479142df",
+          "_parent": {
+            "$ref": "7ebaa7b16633444d"
+          },
+          "source": {
+            "$ref": "3bd6b2cbf7a5473e"
+          },
+          "target": {
+            "$ref": "d0fecc3c60d0434c"
+          },
+          "name": "Products Selected"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "0095f56c38e84878",
+          "_parent": {
+            "$ref": "7ebaa7b16633444d"
+          },
+          "source": {
+            "$ref": "d0fecc3c60d0434c"
+          },
+          "target": {
+            "$ref": "1cb24e8d1de94e41"
+          },
+          "name": "Chart Rendered"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "2b8f27563acd49d3",
+          "_parent": {
+            "$ref": "7ebaa7b16633444d"
+          },
+          "source": {
+            "$ref": "1cb24e8d1de94e41"
+          },
+          "target": {
+            "$ref": "062e888264b0478d"
+          },
+          "name": "Badge Rendered"
+        },
+        {
+          "_type": "UMLTransition",
+          "_id": "641cdc44ab4a42b8",
+          "_parent": {
+            "$ref": "7ebaa7b16633444d"
+          },
+          "source": {
+            "$ref": "062e888264b0478d"
+          },
+          "target": {
+            "$ref": "d9edc73711f74f09"
+          },
+          "name": "Best Deal Highlighted"
+        },
+        {
+          "_type": "UMLStatechartDiagram",
+          "_id": "b7ed4da89d764899",
+          "_parent": {
+            "$ref": "36b59a4dda254f84"
+          },
+          "name": "State - Compare Listings (Detail)",
+          "visible": true,
+          "defaultDiagram": false,
+          "ownedViews": []
+        }
+      ]
+    }
+  ]
+}
